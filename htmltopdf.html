@@ -1,0 +1,22 @@
+require('fpdf.php');
+
+$pdf = new FPDF();
+
+$pdf->AddFont('georgia', '', 'georgia.php');
+$pdf->AddFont('georgia', 'B', 'georgiab.php');
+$pdf->AddFont('georgia', 'I', 'georgiai.php');
+
+# Add UTF-8 support (only add a Unicode font)
+$pdf->AddFont('freesans', '', 'freesans.php', true);
+$pdf->SetFont('freesans', '', 12);
+
+$pdf->SetTitle('My title');
+$pdf->SetAuthor('My author');
+$pdf->SetDisplayMode('fullpage', 'single');
+
+$pdf->SetLeftMargin(20);
+$pdf->SetRightMargin(20);
+
+$pdf->AddPage();
+$pdf->Cell(40,10,'Hello World!');
+$pdf->Output();
