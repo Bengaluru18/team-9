@@ -8,6 +8,15 @@ body {
    background-color: #cccccc;
 
 }
+     h1{
+       color: teal;
+        font-weight: 600;
+        font-family: Montserrat,sans-serif;
+    }
+    h2{
+        color: tomato;
+        font-family: Montserrat,sans-serif;
+    }
 button{
 	color:white;
 	background-color:green;
@@ -52,7 +61,7 @@ include_once 'dbcon.php';
     ?>
 <h1 align="center">Careworks Foundation</h1>
 <h2 align="center">Review Application</h2>
-<br><br>
+<br><hr><br>
 <?php
 //if(isset($_POST['view']))
 //{
@@ -81,7 +90,8 @@ include_once 'dbcon.php';
 //}
 ?>
 
-
-<div id="ima" align="center"><img src="cwf.png" alt="background"></div>
+<br><hr>
+<div id="ima" align="center"><img src="logo.png" alt="background"></div>
+    <br><br>
 </body>
 </html>
