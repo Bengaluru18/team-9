@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Carewroks Foundation</title>
   <style>
   body {
      background-image: url("cwf.png");
@@ -23,41 +23,30 @@
 <div class="container">
   <h1 align="center">Careworks Foundation</h1>
   <h2 align="center">NEED ASSESSMENT</h2>
-  <form action="#">
+  <form action="insert_schoolinfo.php">
     <div class="form-group">
-      <label for="sid">School Id</label>
-      <input type="text" style="width: 150px;" class="form-control" id="sid" placeholder="Enter School Id" name="sid">
+      <label for="sid">School Name</label>
+      <input type="text" style="width: 150px;" class="form-control" id="sid" placeholder="Enter School Name" name="sid" required>
     </div>
     <div class="form-group">
-      <label for="no_of_com">Number of Computers</label>
-      <input type="text" style="width: 150px;" class="form-control" id="no_of_com" placeholder="Enter the number" name="no_of_com">
+      <label for="sid">Locality</label>
+      <input type="text" style="width: 150px;" class="form-control" id="sid" placeholder="Enter Address" name="add" required>
     </div>
-    <div class="form-group">
-      <label for="library">Is Library Arranged</label><br>
-      <input type="radio" name="yes" value="yes"> YES
-      <input type="radio" name="yes" value="no"> NO
+      <div class="form-group">
+      <label for="sid">Head Master's Name</label>
+      <input type="text" style="width: 250px;" class="form-control" id="sid" placeholder="Enter fullname" name="add" required>
     </div>
-    <div class="form-group">
-      <label for="science">Are Chemicals available in Labs</label><br>
-      <input type="radio" name="yes1" value="yes1" > YES
-      <input type="radio" name="yes1" value="no1"> NO
+      <div class="form-group">
+      <label for="sid">Phone Number</label>
+      <input type="text" style="width: 150px;" class="form-control" id="sid" placeholder="Enter Address" name="add" required>
     </div>
-    <div class="form-group">
-      <label for="water">Storage Facility for Drinking Water</label><br>
-      <input type="radio" name="yes2" value="yes2" > YES
-      <input type="radio" name="yes2" value="no2"> NO
+      <div class="form-group">
+      <label for="sid">Locality</label>
+      <input type="text" style="width: 150px;" class="form-control" id="sid" placeholder="Enter Address" name="add" required>
     </div>
-    <div class="form-group">
-      <label for="toilet">Sanitation Facility</label><br>
-      <input type="radio" name="yes3" value="yes3" > YES
-      <input type="radio" name="yes3" value="no3"> NO
-    </div>
-    <div class="form-group">
-      <label for="handwash">Handwash Area</label><br>
-      <input type="radio" name="yes4" value="yes4" > YES
-      <input type="radio" name="yes4" value="no4"> NO
-    </div>
+    <br>
     <button type="submit" class="btn btn-default">Next</button>
+      <br>
   </form>
 </div>
 
