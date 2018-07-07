@@ -23,10 +23,10 @@
 <div class="container">
   <h1 align="center">Careworks Foundation</h1>
   <h2 align="center">NEED ASSESSMENT</h2>
-  <form action="insert_schoolinfo.php">
+  <form action="insert.php">
     <div class="form-group">
       <label for="sid">School Name</label>
-      <input type="text" style="width: 150px;" class="form-control" id="sid" placeholder="Enter School Name" name="sid" required>
+      <input type="text" style="width: 150px;" class="form-control" id="sid" placeholder="Enter School Name" name="name" required>
     </div>
     <div class="form-group">
       <label for="sid">Locality</label>
@@ -34,18 +34,53 @@
     </div>
       <div class="form-group">
       <label for="sid">Head Master's Name</label>
-      <input type="text" style="width: 250px;" class="form-control" id="sid" placeholder="Enter fullname" name="add" required>
+      <input type="text" style="width: 250px;" class="form-control" id="sid" placeholder="Enter fullname" name="hm_name" required>
     </div>
       <div class="form-group">
       <label for="sid">Phone Number</label>
-      <input type="text" style="width: 150px;" class="form-control" id="sid" placeholder="Enter Address" name="add" required>
+      <input type="text" style="width: 150px;" class="form-control" id="sid" placeholder="Enter Address" name="phone" required>
     </div>
       <div class="form-group">
-      <label for="sid">Locality</label>
-      <input type="text" style="width: 150px;" class="form-control" id="sid" placeholder="Enter Address" name="add" required>
+      <label for="computer">Number of Computers</label>
+      <input type="text" style="width: 150px;" class="form-control" id="no_of_com" placeholder="Enter the number" name="no_of_com" required>
+    </div>
+    <div class="form-group">
+      <label for="library">Is Library Arranged</label><br>
+      <input type="radio" name="library" value="yes"> YES
+      <input type="radio" name="libraryr" value="no"> NO
+    </div>
+    <div class="form-group">
+      <label for="science">Are Chemicals available in Labs</label><br>
+      <input type="radio" name="yes1" value="science" required> YES
+      <input type="radio" name="yes1" value="science" required> NO
+    </div>
+    <div class="form-group">
+      <label for="water">Storage Facility for Drinking Water</label><br>
+      <input type="radio" name="water" value="yes2" > YES
+      <input type="radio" name="water" value="no2"> NO
+    </div>
+    <div class="form-group">
+      <label for="toilet">Sanitation Facility</label><br>
+      <input type="radio" name="sanitation" value="yes3" > YES
+      <input type="radio" name="sanitation" value="no3"> NO
+    </div>
+    <div class="form-group">
+      <label for="handwash">Handwash/Restrooms Area</label><br>
+      <input type="radio" name="handwash" value="yes4" > YES
+      <input type="radio" name="handwash" value="no4"> NO
+    </div>
+    <div class="form-group">
+      <label for="handwash">Any NGO involved?</label><br>
+      <input type="radio" name="ngo" value="yes4" > YES
+      <input type="radio" name="ngo" value="no4"> NO
+    </div>
+    <div class="form-group">
+      <label for="handwash">Are any health services provided free?</label><br>
+      <input type="radio" name="health" value="yes4" > YES
+      <input type="radio" name="health" value="no4"> NO
     </div>
     <br>
-    <button type="submit" class="btn btn-default">Next</button>
+    <button type="submit" class="btn btn-default">Submit</button>
       <br>
   </form>
 </div>
