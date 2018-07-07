@@ -10,6 +10,16 @@
      background-size:auto;
      background-position:bottom;
   }
+      h1
+		{
+		  font-size: 32px;
+		  font-weight: 300;
+		  color: #4c4c4c;
+		  text-align: center;
+		  padding-top: 10px;
+		  margin-top: 20px;
+		  margin-bottom: 10px;
+		}
 </style>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,8 +30,9 @@
 <body>
 
 <div class="container">
-  <h1 align="center">Careworks Foundation</h1>
-  <h2 align="center">Resource Allocation</h2>
+  <h1 align="center" style="color:teal">Careworks Foundation</h1>
+  <h2 align="center" style="color:tomato">Resource Allocation</h2><br><hr><br>
+    <center>
   <form action="insert3.php" method="post">
     <div class="form-group">
       <label for="sid">School Id</label>
@@ -54,9 +65,9 @@
     <div class="form-group">
       <label for="teacher_mentor">Techer Mentorship</label>
       <input type="text" style="width: 350px;" class="form-control" id="teacher_mentor" placeholder="Enter the money allocated for Teacher Mentorship" name="teacher_mentor" required>
-    </div>
+    </div><br><br>
    <button type="submit" class="btn btn-default" name="submit">Submit</button>
-  </form>
+  </form></center><hr><br><br>
 </div>
 
 </body>
