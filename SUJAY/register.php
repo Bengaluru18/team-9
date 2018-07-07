@@ -108,6 +108,22 @@ input[type=submit] {
     </div>
     <div class="row">
       <div class="col-25">
+        <label for="area">Area/Region</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="Area" name="area" placeholder="Your Area here..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="pin">Pincode</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="Pincode" name="pin" placeholder="Your Pincode here..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
         <label for="pwd">Password</label>
       </div>
       <div class="col-75">
@@ -131,23 +147,5 @@ input[type=submit] {
     </div>
   </form>
 </div> 
-
-		<!--<form>
-		Full Name<br>
-		<input type="text" name="Name"/></br>
-		Contact Number<br>
-		<input type="text" name="Phone"/></br>
-		Email<br>
-		<input type="email" name="Email"/></br>
-		Password<br>
-		<input type="password" name="Password"/></br>
-		Account Type<br>
-		<select name="au">
-		    <option value="admin">ADMIN</option>
-		    <option value="user">USER</option>
-  		</select>
-		<br></br>
-		<input type="submit" value="submit"/></br>
-		</form>-->
 	</body>
 </html>
