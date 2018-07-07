@@ -102,7 +102,7 @@
 				}
 				body
 				{
-					background-image: url('bg.jpg');	
+					background:black;	
 				}
 				h1{align:center;color:white;-webkit-text-stroke-width:1.5px;-webkit-text-stroke-color:gray;}
 				#k
@@ -130,27 +130,6 @@
 <div id="k">
 <h1 align="center">CAREWORKS FOUNDATION</a></h1>
 
-<table>
-
-<td>
-<div class="dropdown"></div>
-</td>
-<td><a href="/login"><button class="dropbtn">LOGIN</button></a></td>
-<td><div class="dropdown">
-  <button class="dropbtn">CONTACT</button>
-  <div class="dropdown-content">
-    <a>9876543210</a>
-    <a>admin@gmail.com</a>
-   </div></td>
-<td><FORM method=GET action="http://www.google.com/search">
-<A HREF=" http://www.google.com/"></A>
-<INPUT TYPE=text name=q size=30 maxlength=255 value="" style="margin-left:40px">
-<INPUT TYPE=hidden name=hl value="en">
-<INPUT type=submit name=btnG VALUE="Search" style=" color: white;background-color: blue;border: none;cursor: pointer;padding:6px;">
-</FORM></td>
-</tr>
-</table>
-<br>
 <div align="center">
     <div class="myslides"><img src="cwf1.jpg" width="1000" height="465" class = "cc"/></div>
     <div class="myslides"><img src="cwf2.jpg" width="1000" height="465" class = "cc"/></div>
