@@ -36,6 +36,15 @@ margin-top: 200px;
   font-size: 30px;
   text-align: center;
 }
+    h1{
+       color: teal;
+        font-weight: 600;
+        font-family: Montserrat,sans-serif;
+    }
+    h2{
+        color: tomato;
+        font-family: Montserrat,sans-serif;
+    }
 </style>
 <script>
 
@@ -51,7 +60,7 @@ include_once 'dbcon.php';
     ?>
 <h1 align="center">Careworks Foundation</h1>
 <h2 align="center">Review Application</h2>
-
+<hr><br><br>
 <?php
 //if(isset($_POST['view']))
 //{
@@ -100,8 +109,9 @@ include_once 'dbcon.php';
   
 //}
 ?>
+<hr>
+    
 
-
-<div id="ima" align="center"><img src="cwf.png" alt="background"></div>
+<div id="ima" align="center"><img src="logo.png" alt="background"></div>
 </body>
 </html>
