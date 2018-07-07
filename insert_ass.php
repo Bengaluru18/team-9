@@ -40,7 +40,9 @@ $ngo=$_POST['ngo'];
 //$sid=2;
 $q3=mysqli_query($con,"INSERT INTO school VALUES  ('$name' , '$add' , '$hm','$phone' ,'$comp', '$library', '$chemicals', '$water', '$sanitation', '$handwash','$ngo','$health')");
     if($q3)
-        echo "Success";
+    {
+        header("location:asses2.php");
+    }
     else
         echo "Error";
 }

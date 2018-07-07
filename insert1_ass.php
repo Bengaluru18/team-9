@@ -19,7 +19,7 @@ $painting = $_POST['painting'];
 //$sid=2;
 $q3=mysqli_query($con,"INSERT INTO assessment VALUES  ('$name' , '$floor' , '$plaster','$water' ,'$painting', '$rennovation', '$approval', '$remarks')");
     if($q3)
-        echo "Success";
+        echo "<center><h1>Successfully entered the data! <a href='logout.php'>Click to logout</a><br><a href='index.php' >Go back to home</a></h1></center>";
     else
         echo "Error";
 }
