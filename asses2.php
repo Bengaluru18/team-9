@@ -11,6 +11,21 @@
      background-position:bottom;
 
   }
+      .container h1{
+            color: teal;
+            font-family: Montserrat,sans-serif;
+        }
+        .container h2,h3{
+            color: tomato;
+            font-family: Montserrat,sans-serif;
+        }
+        button{
+            padding: 10px;
+            margin: 10px;
+            background-color: tomato;
+            font-family: cursive,sans-serif;
+            border-radius: 6px;
+        }  
 </style>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,7 +38,7 @@
 session_start();
 
   if(!(isset($_SESSION['email']))){
-header("location:index.html");
+header("location:index.php");
   }
 else
 {
@@ -37,6 +52,7 @@ else
 <div class="container">
   <h1 align="center">Careworks Foundation</h1>
   <h2 align="center">NEED ASSESSMENT</h2>
+    <center>
   <form action="insert1_ass.php" method="post">
     <div class="form-group">
       <label for="sid">School Name</label>
@@ -80,7 +96,7 @@ else
       <label for="response">Remarks</label>
       <input type="text" style="height: 150px; width:300px;" class="form-control" id="response" placeholder="Enter the Remarks" name="remarks">
     </div>    <button type="submit" class="btn btn-default" name="submit">Submit</button>
-  </form>
+  </form></center><br><hr><br>
 </div>
 
 </body>

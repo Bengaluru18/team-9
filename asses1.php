@@ -4,13 +4,29 @@
   <title>Carewroks Foundation</title>
   <style>
   body {
-     background-image: url("cwf.png");
+     background-image: url("logo.png");
      background-color: #cccccc;
      background-repeat: no-repeat;
      background-size:auto;
-     background-position:bottom;
+     background-position:top left;
 
   }
+      
+       .container h1{
+            color: teal;
+            font-family: Montserrat,sans-serif;
+        }
+        .container h2,h3{
+            color: tomato;
+            font-family: Montserrat,sans-serif;
+        }
+        button{
+            padding: 10px;
+            margin: 10px;
+            background-color: tomato;
+            font-family: cursive,sans-serif;
+            border-radius: 6px;
+        }  
 </style>
     <?php
  include_once 'dbcon.php';
@@ -35,15 +51,16 @@ else
 
 <div class="container">
   <h1 align="center">Careworks Foundation</h1>
-  <h2 align="center">NEED ASSESSMENT</h2>
+  <h2 align="center">NEED ASSESSMENT</h2><br><hr>
+    <center>
   <form action="insert_ass.php" method="post">
     <div class="form-group">
       <label for="sid">School Name</label>
-      <input type="text" style="width: 150px;" class="form-control" id="sid" placeholder="Enter School Name" name="name" required>
+      <input type="text" style="width: 250px;" class="form-control" id="sid" placeholder="Enter School Name" name="name" required>
     </div>
     <div class="form-group">
       <label for="sid">Locality</label>
-      <input type="text" style="width: 150px;" class="form-control" id="sid" placeholder="Enter Address" name="add" required>
+      <input type="text" style="width: 250px;" class="form-control" id="sid" placeholder="Enter Address" name="add" required>
     </div>
       <div class="form-group">
       <label for="sid">Head Master's Name</label>
@@ -51,11 +68,11 @@ else
     </div>
       <div class="form-group">
       <label for="sid">Phone Number</label>
-      <input type="text" style="width: 150px;" class="form-control" id="sid" placeholder="Enter Address" name="phone" required>
+      <input type="text" style="width: 250px;" class="form-control" id="sid" placeholder="Enter Address" name="phone" required>
     </div>
       <div class="form-group">
       <label for="computer">Number of Computers</label>
-      <input type="text" style="width: 150px;" class="form-control" id="no_of_com" placeholder="Enter the number" name="computer" required>
+      <input type="text" style="width: 250px;" class="form-control" id="no_of_com" placeholder="Enter the number" name="computer" required>
     </div>
     <div class="form-group">
       <label for="library">Is Library Arranged</label><br>
@@ -94,8 +111,8 @@ else
     </div>
     <br>
     <button type="submit" class="btn btn-default" name="submit">Submit</button>
-      <br>
-  </form>
+      <br><hr><br>
+  </form></center>
 </div>
 
 </body>
