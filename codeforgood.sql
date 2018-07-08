@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 07, 2018 at 10:40 PM
+-- Generation Time: Jul 08, 2018 at 04:39 AM
 -- Server version: 5.7.9
 -- PHP Version: 5.6.16
 
@@ -58,7 +58,12 @@ INSERT INTO `assessment` (`name`, `floor`, `plaster`, `water`, `painting`, `renn
 ('Jp Morgans', 'Good', 'Bad', 'bad', 'not conducted', 'yes', 'yes', 'ghfg'),
 ('Jp Morgans', 'Good', 'Bad', 'bad', 'not conducted', 'yes', 'yes', 'ghfg'),
 ('Jp Morgans', 'Good', 'Bad', 'bad', 'not conducted', 'yes', 'yes', 'ghfg'),
-('Vinit Shahdeo', 'Bad', 'Bad', 'good', 'not conducted', 'no', 'yes', 'gg');
+('Vinit Shahdeo', 'Bad', 'Bad', 'good', 'not conducted', 'no', 'yes', 'gg'),
+('Dps Ranchi', 'Bad', 'Bad', 'good', 'not conducted', 'yes', 'no', 'Not any!!'),
+('Pv K', 'Bad', 'Bad', 'good', 'not conducted', 'yes', 'yes', 'Not any'),
+('Kv Bangalore', 'Bad', 'Good', 'bad', 'not conducted', 'yes', 'no', 'not any'),
+('Kv Bangalore', 'Bad', 'Good', 'bad', 'not conducted', 'yes', 'no', 'not any'),
+('Dps Bangalore', 'Bad', 'Worse', 'worse', 'not conducted', 'yes', 'yes', 'nOT ANY!!');
 
 -- --------------------------------------------------------
 
@@ -85,7 +90,11 @@ INSERT INTO `dataentry` (`school`, `money`, `computer`) VALUES
 ('DPS', 100, 50),
 ('VELLORE', 78, 45),
 ('DPS', 20000, 40),
-('vit', 50000, 70);
+('vit', 50000, 70),
+('DPS Bangalore', 70000, 70),
+('DAV Public School', 2345, 32),
+('DPS DELHI', 123456, 40),
+('vit', 12345, 12);
 
 -- --------------------------------------------------------
 
@@ -141,7 +150,8 @@ CREATE TABLE IF NOT EXISTS `resources` (
 
 INSERT INTO `resources` (`sid`, `name`, `infrastructure`, `classroom`, `health`, `academic`, `stakeholder`, `mentorship`) VALUES
 (12, '', '3', '', '3', '', '3', ''),
-(12, '', '3', '', '3', '', '3', '');
+(12, '', '3', '', '3', '', '3', ''),
+(19, '', '2000', '', '459', '', '657', '');
 
 -- --------------------------------------------------------
 
@@ -174,7 +184,31 @@ INSERT INTO `school` (`name`, `address`, `hm_name`, `phone`, `computers`, `libra
 ('Vinit Shahdeo', 'PHULSU', 'Vinit Shahdeo', '8870855940', '6', 'no', 'yes', 'yes', 'yes', 'yes', 'no', 'yes'),
 ('Vinit Shahdeo', 'PHULSU', 'Vinit Shahdeo', '8870855940', '6', 'no', 'yes', 'yes', 'yes', 'yes', 'no', 'yes'),
 ('Jp Morgans', 'Block, VIT University', 'Vinit Shahdeo', '8870855940', '6', 'no', 'yes', 'yes', 'yes', 'no', 'yes', 'no'),
-('Jp Chase', 'Ranchi', 'Vinit Shahdeo', '7858832120', '6', 'no', 'yes', 'no', 'yes', 'yes', 'no', 'yes');
+('Jp Chase', 'Ranchi', 'Vinit Shahdeo', '7858832120', '6', 'no', 'yes', 'no', 'yes', 'yes', 'no', 'yes'),
+('Dps Ranchi', 'Ranchi', 'Ram Singh', '7858832120', '245', 'yes', 'yes', 'yes', 'yes', 'yes', 'no', 'no'),
+('Pv K', 'Mysore', 'Raj', '7871234149', '123', 'yes', 'no', 'yes', 'yes', 'no', 'yes', 'yes'),
+('Dps Bangalore', 'bangalore', 'Shree', '8870855940', '45', 'yes', 'no', 'no', 'yes', 'yes', 'no', 'no'),
+('Dps Bangalore', 'bangalore', 'Shree', '8870855940', '45', 'yes', 'no', 'no', 'yes', 'yes', 'no', 'no');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `status`
+--
+
+DROP TABLE IF EXISTS `status`;
+CREATE TABLE IF NOT EXISTS `status` (
+  `name` varchar(40) NOT NULL,
+  `status` varchar(40) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `status`
+--
+
+INSERT INTO `status` (`name`, `status`) VALUES
+('Vidya Bharti Public School', 'Approved'),
+('DPS Bangalore', 'Approved');
 
 -- --------------------------------------------------------
 
@@ -194,7 +228,9 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`name`, `email`, `password`) VALUES
-('Vinit Shahdeo', 'vinitshahdeo@gmail.com', '12345');
+('Vinit Shahdeo', 'vinitshahdeo@gmail.com', '12345'),
+('Vaibhaw ', 'vaibhaw@gmail.com', '12345'),
+('Shreya', 'shreya@gmail.com', '12345');
 
 -- --------------------------------------------------------
 
@@ -225,7 +261,12 @@ INSERT INTO `volunteer` (`name`, `contact`, `email`, `area`, `pin`, `password`) 
 ('Vinit Shahdeo', '08870855940', 'vinitshahdeo', 'Tamilnadu', '632014', 'servic'),
 ('Vinit Shahdeo', '08870855940', 'vinitshahdeo', 'Tamilnadu', '632014', 'servicebe'),
 ('Vinit Shahdeo', '08870855940', 'vinitshahdeo', 'Tamilnadu', '632014', 'servicebe'),
-('Vinit Shahdeo', '08870855940', 'vinitshahdeo', 'Tamilnadu', '632014', 'servicebefo');
+('Vinit Shahdeo', '08870855940', 'vinitshahdeo', 'Tamilnadu', '632014', 'servicebefo'),
+('Shreya', '8870855940', 'shrey@gmail.com', 'Jharkhand', '829202', '1234'),
+('Dish', '07858832120', 'disha@gmail.com', 'JHARKHAND', '829202', '12345'),
+('Shreya', '98765', 'shreyaw@gmail.com', 'JHARKHAND', '829202', '987'),
+('Sam', '8870855940', 'vinitshahdeo@gmail.com', 'Jharkhand', '829202', '1234'),
+('Vinit Shahdeo', '08870855940', 'vinitshahdeo', 'Tamilnadu', '632014', 's123');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
