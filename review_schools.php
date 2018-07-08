@@ -66,12 +66,12 @@ $con= new mysqli('localhost','root','','codeforgood')or die("Could not connect t
       
     for($i=0;$i<$count;$i++)
     { 
-          echo "<div class='grid-item'>$row[$i]</div><div class='grid-item'><a href='./schools.php'>View details</a></div><div class='grid-item'>Approved</div>";
+          echo "<div class='grid-item'>$row[$i]</div><div class='grid-item'><a href='./schoolinfo.php'>View details</a></div><div class='grid-item'><center><button type='button' name='approve' >APPROVE</button><button type='button'  name='reject' style='background-color:red'>REJECT</button><center></div>";
     }
    
   }
 ?>
 </div>
-<div id="ima" align="center"><img src="cwf.png" alt="background"></div>
+<div id="ima" align="center"><img src="logo.png" alt="background"></div>
 </body>
 </html>
