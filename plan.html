@@ -1,8 +1,13 @@
 <html>
 <head>
-<title>Report - Need Assessment</title> 
+<title>Plan of Action - CAREWORDS FOUNDATION</title>  
 <style>
-    
+body{
+  background:#eaeaea;
+  font-family:Arial, sans-serif;
+  color:#333;
+}
+
 .wrapper{
   width:100%;
   max-width:400px;
@@ -444,65 +449,140 @@
 .ui-tooltip-content {
     position: relative;
     padding: 0.5em;
-}
-    </style>
-</head>
-</html>
-<?php
- 
-$dataPoints = array();
-//Best practice is to create a separate file for handling connection to database
-try{
-     // Creating a new connection.
-    // Replace your-hostname, your-db, your-username, your-password according to your database
-    $link = new \PDO(   'mysql:host=localhost;dbname=codeforgood;charset=utf8mb4', //'mysql:host=localhost;dbname=canvasjs_db;charset=utf8mb4',
-                        'root', //'root',
-                        '', //'',
-                        array(
-                            \PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-                            \PDO::ATTR_PERSISTENT => false
-                        )
-                    );
-	
-    $handle = $link->prepare('select computer,money from dataentry'); 
-    $handle->execute(); 
-    $result = $handle->fetchAll(\PDO::FETCH_OBJ);
-		
-    foreach($result as $row){
-        array_push($dataPoints, array("x"=> $row->computer, "y"=> $row->money));
-    }
-	$link = null;
-}
-catch(\PDOException $ex){
-    print($ex->getMessage());
-}
-	
-?>
-<!DOCTYPE HTML>
-<html>
-<head>  
-<script>
-window.onload = function () {
- 
-var chart = new CanvasJS.Chart("chartContainer", {
-	animationEnabled: true,
-	exportEnabled: true,
-	theme: "light1", // "light1", "light2", "dark1", "dark2"
-	title:{
-		text: "Resource Report Generation"
-	},
-	data: [{
-		type: "column", //change type to bar, line, area, pie, etc  
-		dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
-	}]
-});
-chart.render();
- 
-}
-</script>
-<script>
+}    
     
-var undo = false;
+</style>
+</head>
+<body>
+<div class="undo">
+ Task deleted 
+  <div> 
+    <span class="fa fa-undo"></span>
+    Undo
+  </div>
+</div>
+
+<div class="wrapper">
+
+  
+<div class="main">
+  <div class="header">
+    <h1>Winter camping<span>Nov 27, 2017</span></h1>
+  </div>
+  
+  <ul id="sortable">
+    <li style="display:none">
+      <span class="priority-indicator"></span>      
+      <div class="dragger">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cy="7" cx="9.5" r="1" fill="#999"></circle><circle cy="7" cx="14" r="1" fill="#999"></circle><circle cy="12.5" cx="9.5" r="1" fill="#999"></circle><circle cy="12.5" cx="14" r="1" fill="#999"></circle><circle cy="18" cx="9.5" r="1" fill="#999"></circle><circle cy="18" cx="14" r="1" fill="#999"></circle></svg>
+      </div>
+      <input type="checkbox"/>
+      <label>
+        <div class="checkbox"><span class="fa fa-check"></span></div>
+        <span class="item-name">First-aid kit </span>        
+        <input type="text">
+      </label>
+      <div class="actions">   
+        <span class="fa fa-dot-circle-o prio-btn"></span>
+        <span class="fa fa-pencil"></span>
+        <span class="fa fa-trash"></span>        
+      </div>
+    </li>
+    
+    <li class="checked">
+      <span class="priority-indicator"></span>
+      <div class="dragger">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cy="7" cx="9.5" r="1" fill="#999"></circle><circle cy="7" cx="14" r="1" fill="#999"></circle><circle cy="12.5" cx="9.5" r="1" fill="#999"></circle><circle cy="12.5" cx="14" r="1" fill="#999"></circle><circle cy="18" cx="9.5" r="1" fill="#999"></circle><circle cy="18" cx="14" r="1" fill="#999"></circle></svg>
+      </div>
+      <input type="checkbox" id="1" checked/>
+      <label for="1">
+        <div class="checkbox">
+          <span class="fa fa-check"></span>
+          </div>
+        <span class="item-name">First-aid kit </span>        
+        <input type="text">
+      </label>
+      <div class="actions">   
+        <span class="fa fa-dot-circle-o prio-btn"></span>
+        <span class="fa fa-pencil"></span>
+        <span class="fa fa-trash"></span>        
+      </div>
+    </li>
+    
+    <li class="priority priority2">
+      <span class="priority-indicator"></span>
+     <div class="dragger">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cy="7" cx="9.5" r="1" fill="#999"></circle><circle cy="7" cx="14" r="1" fill="#999"></circle><circle cy="12.5" cx="9.5" r="1" fill="#999"></circle><circle cy="12.5" cx="14" r="1" fill="#999"></circle><circle cy="18" cx="9.5" r="1" fill="#999"></circle><circle cy="18" cx="14" r="1" fill="#999"></circle></svg>
+      </div>
+      <input type="checkbox" id="2"/>
+      <label for="2">
+        <div class="checkbox"><span class="fa fa-check"></span></div>
+        <span class="item-name">Water bottles</span>
+        <input type="text">
+      </label>
+      <div class="actions">
+        <span class="fa fa-dot-circle-o prio-btn"></span>
+        <span class="fa fa-pencil"></span>
+        <span class="fa fa-trash"></span>
+      </div>
+    </li>
+    
+    <li class="priority priority1">
+      <span class="priority-indicator"></span>
+      <div class="dragger">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cy="7" cx="9.5" r="1" fill="#999"></circle><circle cy="7" cx="14" r="1" fill="#999"></circle><circle cy="12.5" cx="9.5" r="1" fill="#999"></circle><circle cy="12.5" cx="14" r="1" fill="#999"></circle><circle cy="18" cx="9.5" r="1" fill="#999"></circle><circle cy="18" cx="14" r="1" fill="#999"></circle></svg>
+      </div>
+      <input type="checkbox" id="4" />
+      <label for="4">
+        <div class="checkbox"><span class="fa fa-check"></span></div>
+        <span class="item-name">Tent</span>
+        <input type="text">
+      </label>
+      <div class="actions">
+        <span class="fa fa-dot-circle-o prio-btn"></span>
+        <span class="fa fa-pencil"></span>
+        <span class="fa fa-trash"></span>
+      </div>
+    </li>
+    
+    <li>
+      <span class="priority-indicator"></span>
+      <div class="dragger">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cy="7" cx="9.5" r="1" fill="#999"></circle><circle cy="7" cx="14" r="1" fill="#999"></circle><circle cy="12.5" cx="9.5" r="1" fill="#999"></circle><circle cy="12.5" cx="14" r="1" fill="#999"></circle><circle cy="18" cx="9.5" r="1" fill="#999"></circle><circle cy="18" cx="14" r="1" fill="#999"></circle></svg>
+      </div>
+      <input type="checkbox" id="3" />
+      <label for="3">
+        <div class="checkbox"><span class="fa fa-check"></span></div>
+        <span class="item-name">Sleeping bags (2x)</span>
+        <input type="text">
+      </label>
+      <div class="actions">
+        <span class="fa fa-dot-circle-o prio-btn"></span>
+        <span class="fa fa-pencil"></span>
+        <span class="fa fa-trash"></span>
+      </div>
+    </li>
+  </ul>
+  
+  <div class="add">
+    <div class="add-txt">
+      <div>
+        <span class="fa fa-plus"></span>
+      </div>
+      <span class="txt">Add new</span>
+      <input type="text">
+    </div>
+    
+  </div>
+  
+</div>
+  
+    </div>
+    
+    <script>
+    
+    
+        var undo = false;
 var list_item_to_undo;
 var time_out;
 
@@ -674,10 +754,6 @@ function function_undo(list_item_to_undo, undo){
   }
 }
     
-</script>
-</head>
-<body>
-<div id="chartContainer" style="height: 370px; width: 100%;"></div>
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-</body>
-</html>     
+    </script>
+    </body>
+</html>

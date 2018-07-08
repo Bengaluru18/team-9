@@ -66,7 +66,8 @@ input[type=submit] {
   }
 }
 	</style>
-	
+	<center><h2 style="color:teal;backrgound-color:transparent;">Careworks Foundation</h2></center>
+    <center><h3>Join us as a Volunteer!!</h3></center>
 	<h1 align="center">Please Register</h1>
 	<body>
 
@@ -120,19 +121,7 @@ input[type=submit] {
         <input type="password" id="Password" name="password" placeholder="Your Password here..">
       </div>
     </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="aoru">Account Type</label>
-      </div>
-        <!--
-      <div class="col-75">
-        <select id="AorU" name="aoru">
-          <option value="admin">Admin</option>
-          <option value="user">User</option>
-        </select>
-      </div>
--->
-    </div>
+    
     <br><br>
     <div class="row">
       <input type="submit" name="submit" value="Submit">

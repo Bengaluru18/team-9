@@ -47,7 +47,28 @@ margin-top: 200px;
     {
         document.getElementBy("id"+i).style.display=none;
     }
+    function myfunction()
+    {
+        window.location='admin_homepage.html';
+    }
 </script>
+    <style>
+    
+        h1{
+            color: teal;
+            font-family: Montserrat,sans-serif;
+        }
+        h2{
+            color: tomato;
+            font-family: Montserrat,sans-serif;
+        }
+        button{
+            padding: 10px;
+            margin: 10px;
+            font-family: cursive,sans-serif;
+            border-radius: 6px;
+        }
+    </style>
 </head>
 <body>
     <?php
@@ -68,25 +89,27 @@ include_once 'dbcon.php';
   or die(mysql_error());
   $count=mysqli_num_fields($rs);
   //echo "<table border='3'><tr><th>NAME</th><th>LOCALITY</th><th>HEAD MASTER'S NAME</th><th>PHONE</th></tr>";
+     echo "<br><br> <br><center>PROGRESS AND REVIEW</center>";
   while($row=mysqli_fetch_array($rs))
   {
       echo "<br><br>";
       echo "<center><table border='3'>";
-
+    
     for($i=0;$i<$count;$i++)
     { 
           echo "<tr><td>$a[$i]</td><td>$row[$i]</td></tr>";
     }
       echo "<tr><center><textarea rows='10' cols='60' placeholder='Enter remarks and progress!'></textarea><center></tr>";
       echo "</table></center>";
-      echo "<br><br> <br><center>PROGRESS AND REVIEW</center>";
-  }
     
+      echo "<br><center><button type='button' name='submit' onclick='myfunction()'>SUBMIT</button></center>";  
+  }
+   
     
     
 ?>
 
 
-<div id="ima" align="center"><img src="cwf.png" alt="background"></div>
+<div id="ima" align="center"><img src="logo.png" alt="background"></div>
 </body>
 </html>
